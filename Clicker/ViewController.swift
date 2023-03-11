@@ -8,12 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    private var valueCounter: Int = 0
+    
+    @IBOutlet weak var labelValueCounter: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBAction func buttonTouchDown() {
+        valueCounter += 1
+        labelValueCounter.text = "Значение cчётчика: \(valueCounter)"
+    }
 }
 
