@@ -10,13 +10,13 @@ import UIKit
 class ViewController: UIViewController {
     private var valueCounter: Int = 0
     
-    @IBOutlet weak var labelValueCounter: UILabel!
+    @IBOutlet weak private var labelValueCounter: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func buttonTouchDown() {
+    @IBAction private func buttonTouchDown() {
         valueCounter += 1
         labelValueCounter.text = "Значение cчётчика: \(valueCounter)"
     }
